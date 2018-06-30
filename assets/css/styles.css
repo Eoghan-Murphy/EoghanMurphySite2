@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+h1{
+  text-align: center;
+}
+
+header{
+  padding: 2vh 0;
+  max-width: 25%;
+
+}
+
+header h1{
+  text-align: center;
+}
+
+nav{
+  z-index: 3;
+  top: 0;
+  position: sticky;
+  background-color: red;
+}
+
+nav ul{
+  padding-top: auto;
+  padding-bottom: auto;
+  text-align: center;
+  max-width: 24%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+nav li{
+  padding: 1vh 0;
+}
+
+
+.about{
+  padding: 17vh 0;
+  align-items: baseline;
+  background-color: green;
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+
+}
+
+.about img{
+  margin: 3vh 0;
+  border-radius: 10px;
+  max-height: 50vh;
+  -webkit-box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
+}
+
+.aboutcontent p{
+  margin: 3vh 0;
+}
+
+.aboutcontent h2{
+
+}
+
+.aboutcontent{
+  align-self: center;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectcontainer{
+  margin-top: 5vh;
+}
+
+.projects{
+  overflow: hidden;
+  position: relative;
+  background-color: yellow;
+  display: flex;
+  max-width: 76%;
+  flex-wrap: wrap;
+  margin: 5vh auto;
+  justify-content: space-around;
+}
+
+
+.singleproject{
+  margin: 2vh;
+  background-color: grey;
+  width: 330px;
+  height: 186px;
+  border-style: solid;
+}
+
+.grades{
+  background-color: pink;
+}
+
+.gradecontainer{
+  background-color: purple;
+  width: 1200px;
+  height: 675px;
+  margin: auto;
+}
+
+@media screen and (max-width:992px){
+
+  header, nav ul{
+    max-width: 40%;
+  }
+
+  .about{
+    max-width: 100%;
+  }
+
+  .about img{
+    align-self: center;
+  }
+
+  .aboutcontent h2{
+    text-align: center;
+  }
+
+  .projects{
+    max-width: 100%;
+  }
+
+  .singleproject{
+    width: 700px;
+    height: 394px;
+  }
+}
+
+@media screen and (max-width:600px){
+
+  header{
+    max-width: 100%;
+    text-align: center;
+  }
+  nav ul{
+    flex-direction: column;
+    margin: auto;
+  }
+  .about{
+    padding: 5vh;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .aboutcontent{
+    max-width: 90%;
+  }
+}
