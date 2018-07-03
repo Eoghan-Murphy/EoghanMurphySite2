@@ -18,3 +18,14 @@ function hideProject(){
     var displayPort = document.getElementById("focusproject");
     displayPort.style.display = 'none';
 }
+
+function switchGrades(tabNum){
+  tablist = document.getElementById("tabs").children;
+  yearlist = document.getElementById("gradecontainer").children;
+  for(i = 0; i < yearlist.length; i++){
+    yearlist[i].style.display = 'none';
+    tablist[i].classList.remove('activetab');
+  }
+  yearlist[tabNum].style.display = 'flex';
+  tablist[tabNum].classList.add('activetab');
+}
