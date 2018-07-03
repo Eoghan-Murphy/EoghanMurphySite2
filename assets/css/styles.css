@@ -118,6 +118,20 @@ nav li{
   height: 203px;
 }
 
+.singleproject:hover h1{
+  display: none;
+}
+
+.singleproject:hover p{
+  display: block;
+}
+
+.singleproject:hover a{
+  display: block;
+}
+
+
+
 .singleproject img{
   opacity: 0.8;
   max-height: 115%;
@@ -135,7 +149,38 @@ nav li{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
 
+.singleproject p{
+  width: 80%;
+  padding: 5%;
+  display: none;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.singleproject a{
+  text-align: center;
+  width: 70%;
+  padding: 3%;
+  display: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #3a7ce8;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.singleproject a:hover{
+  background-color: #2e60b2;
+  cursor: pointer;
 }
 
 .projectdata{
@@ -143,11 +188,12 @@ nav li{
 }
 
 #focusproject{
+  overflow: hidden;
   border-radius: 15px;
   transition: width 0.4s;
   width: 100%;
   height: 100%;
-  background-color: blue;
+  background-color: grey;
   position: absolute;
   display: none;
   /*transform-origin: top left;*/
@@ -155,6 +201,15 @@ nav li{
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
+}
+
+#closeproject{
+  margin-right: 1%;
+}
+
+#closeproject:hover{
+  color: white;
+  font-weight: bold;
 }
 
 #focusproject h2{
@@ -290,6 +345,17 @@ nav li{
     width: 700px;
     height: 394px;
   }
+
+  .singleproject:hover{
+    width: 730px;
+    height: 411px;
+  }
+
+  #focusproject{
+    width: 730px;
+    height: 411px;
+  }
+
 
 
 @media screen and (max-width:600px){

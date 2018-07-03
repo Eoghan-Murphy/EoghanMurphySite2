@@ -9,7 +9,7 @@ function displayFully(projectName){
   var zoomPointY = ((currProject.offsetTop + (currProject.clientHeight / 2))/ container.clientHeight) * 100
   console.log(zoomPointX)
   displayPort.style.transformOrigin = zoomPointX + "% " + zoomPointY + "%";
-  displayPort.innerHTML = "<h2 onclick='hideProject()'>X</h2>" + currProject.innerHTML;
+  displayPort.innerHTML = "<h2 id='closeproject' onclick='hideProject()'>X</h2>" + currProject.innerHTML;
   displayPort.style.display = 'block';
 }
 
