@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
+    <div id="fadeOut"></div>
     <header>
-      <h1>Eoghan Murphy</h1>
+      <h1 id="logo">Eoghan Murphy</h1>
     </header>
     <nav>
       <ul>
-        <li><a>About</a></li>
-        <li><a>Projects</a></li>
-        <li><a>Grades</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#navproject">Projects</a></li>
+        <li><a href="#navgrades">Grades</a></li>
       </ul>
     </nav>
-    <div class="about">
+    <div id="about">
       <img src="assets/images/about1.jpg" alt="Picture of Eoghan Murphy">
       <div class="aboutcontent">
         <h2>This Dog is Cool</h2>
@@ -25,6 +26,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum tincidunt fermentum. Duis tristique, neque sit amet congue sodales, mi augue molestie lectus, ac elementum massa est a sem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse dignissim urna arcu. Integer dapibus turpis eget tincidunt facilisis. Maecenas luctus mi purus, non bibendum nisi suscipit sed. Duis vitae neque porttitor, facilisis risus consectetur, placerat eros. Suspendisse dignissim eros nisl, vitae viverra sem vulputate ut. Duis et odio at nisi pretium suscipit ac eu tortor. Suspendisse dolor purus, venenatis vel elit et, imperdiet viverra mi. Ut tempus vel quam quis eleifend. Ut lacinia est tortor, ac mollis diam efficitur nec. Ut ultricies iaculis diam non imperdiet. Aliquam in est id diam volutpat faucibus.</p>
       </div>
     </div>
+    <div id="navproject"></div>
     <div id="projectcontainer">
     <h1>Projects</h1>
       <div id="projects">
@@ -93,7 +95,8 @@
         </div>
       </div>
     </div>
-    <div class="grades">
+    <div id="navgrades"></div>
+    <div id="grades">
         <h1> Grades: Computer Applications DCU</h1>
         <div id="tabs">
           <div id='tab1' class="tab" onclick = "switchGrades(0)"><p>Year 1</p></div>
@@ -198,6 +201,14 @@
           </div>
       </div>
     </div>
+    <footer>
+      <div id="footerlinks">
+        <a href="#logo">Back to Top</a>
+        <a href="https://www.linkedin.com/in/eoghan-murphy-45034515a/"><img src="assets/images/Linkedin.png"></a>
+        <a href="https://twitter.com/EoghanM71874739"><img src="assets/images/Twitter.png"></a>
+        <a href="https://github.com/Eoghan-Murphy"><img src="assets/images/Github.png"></a>
+      </div>
+    </footer>
     <script src="assets/javascript/script1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>

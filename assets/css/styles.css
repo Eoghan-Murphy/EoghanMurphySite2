@@ -3,12 +3,24 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  background-color: #f7f7f7;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing:border-box;
+}
+
+#fadeOut{
+  display: none;
+  pointer-events: none;
+  opacity: 0.6;
+  position: fixed;
+  z-index: 4;
+  background-color: black;
+  width: 100%;
+  height: 100%;
 }
 
 h1{
@@ -18,18 +30,20 @@ h1{
 header{
   padding: 2vh 0;
   max-width: 25%;
-
 }
+
+
 
 header h1{
   text-align: center;
 }
 
 nav{
+  overflow: hidden;
   z-index: 4;
   top: 0;
   position: sticky;
-  background-color: red;
+  background-color: #d8d8d8;
   -webkit-box-shadow: 0 5px 4px -1px rgba(0,0,0,0.25);
 	   -moz-box-shadow: 0 5px 4px -1px rgba(0,0,0,0.25);
   box-shadow: 0 5px 4px -1px rgba(0,0,0,0.25);
@@ -49,22 +63,37 @@ nav li{
   padding: 1vh 0;
 }
 
+nav a{
+  text-decoration: none;
+}
 
-.about{
+nav a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover{
+  color: white;
+  text-shadow: 0px 5px 2px rgba(150, 150, 150, 1);
+}
+
+#about{
   padding: 17vh 0;
   align-items: baseline;
-  /*background-color: green;*/
   display: flex;
   justify-content: space-around;
   max-width: 80%;
   margin: auto;
+  border-bottom-style: dashed;
+  border-color: #bababa;
 
 }
 
-.about img{
+#about img{
   margin: 3vh 0;
   border-radius: 10px;
   max-height: 50vh;
+  min-height: 300px;
   -webkit-box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
   box-shadow: -1px 9px 46px 0px rgba(0,0,0,0.75);
@@ -86,13 +115,18 @@ nav li{
 }
 
 #projectcontainer{
+  max-width: 80%;
   margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom-style: dashed;
+  border-color: #bababa;
 }
 
 #projects{
   position: relative;
   display: flex;
-  max-width: 76%;
+  max-width: 95%;
   flex-wrap: wrap;
   margin: 5vh auto;
   justify-content: space-around;
@@ -103,7 +137,7 @@ nav li{
   position: relative;
   border-radius:25px;
   margin: 2vh;
-  background-color: grey;
+  background-color: #757575;
   width: 330px;
   height: 186px;
   overflow: hidden;
@@ -228,8 +262,7 @@ nav li{
     to {transform:scale(1)};
 }
 
-.grades{
-}
+
 
 #gradecontainer{
   position: relative;
@@ -263,12 +296,13 @@ nav li{
   justify-content: space-between;
 }
 
-.grades{
+#grades{
   font-family: 'Source Sans Pro', sans-serif;
-  padding-bottom: 20vh;
+  padding-bottom: 6vh;
 }
 
-.grades h1{
+#grades h1{
+  margin: 3vh 0;
   padding: 2vh 0;
 }
 
@@ -317,6 +351,49 @@ nav li{
   margin-right: 2vw;
 }
 
+footer{
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #757575;
+  color: white;
+}
+
+#footerlinks{
+  display: flex;
+  max-width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footerlinks a{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+#footerlinks a:hover{
+  font-weight: bolder;
+}
+
+#footerlinks a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+#footerlinks img{
+  max-width: 3vw;
+  border-radius: 5px;
+}
+
+#footerlinks img:hover{
+  opacity: 0.8;
+  background-color: black;
+}
+
+
 @media screen and (max-width:1520px){
 
 .singleproject{
@@ -345,11 +422,11 @@ nav li{
     max-width: 40%;
   }
 
-  .about{
+  #about{
     max-width: 100%;
   }
 
-  .about img{
+  #about img{
     align-self: center;
   }
 
@@ -388,7 +465,7 @@ nav li{
     flex-direction: column;
     margin: auto;
   }
-  .about{
+  #about{
     padding: 5vh;
     max-width: 100%;
     align-items: center;

@@ -2,21 +2,32 @@
 function displayFully(projectName){
   var currProject = document.getElementById(projectName);
   var displayPort = document.getElementById("focusproject");
-  var container = document.getElementById("projects")
+  var backGround = document.getElementById("fadeOut");
+  var container = document.getElementById("projects");
 
-  //console.log(container.clientWidth, container.clientHeight);
-  var zoomPointX = ((currProject.offsetLeft + (currProject.clientWidth / 2)) / container.clientWidth) * 100
-  var zoomPointY = ((currProject.offsetTop + (currProject.clientHeight / 2))/ container.clientHeight) * 100
-  console.log(zoomPointX)
-  displayPort.style.transformOrigin = zoomPointX + "% " + zoomPointY + "%";
+  console.log(document.getElementById("tabs").getBoundingClientRect());
+
   displayPort.innerHTML = "<h2 id='closeproject' onclick='hideProject()'>X</h2>" + currProject.innerHTML;
   displayPort.style.display = 'block';
+  if (window.innerWidth < 1520){
+  backGround.style.display = 'block';
+  }
+}
+
+function testIt(){
+console.log(document.getElementById("tabs").getBoundingClientRect());
 }
 
 
+testIt();
+window.onkeypress = testIt;
+
+
 function hideProject(){
+    var backGround = document.getElementById("fadeOut");
     var displayPort = document.getElementById("focusproject");
     displayPort.style.display = 'none';
+    backGround.style.display = 'none';
 }
 
 function switchGrades(tabNum){
