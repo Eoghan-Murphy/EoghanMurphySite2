@@ -317,7 +317,27 @@ nav li{
   margin-right: 2vw;
 }
 
+@media screen and (max-width:1520px){
 
+.singleproject{
+  width: 900px;
+  height: 506px;
+}
+
+.singleproject:hover{
+  width: 930px;
+  height: 523px;
+}
+
+#focusproject{
+  position: fixed;
+  top: 20vh;
+  width: 930px;
+  height: 523px;
+  z-index:5;
+}
+
+}
 
 @media screen and (max-width:992px){
 
@@ -377,5 +397,20 @@ nav li{
   }
   .aboutcontent{
     max-width: 90%;
+  }
+
+  .singleproject{
+    width: 500px;
+    height: 281px;
+  }
+
+  .singleproject:hover{
+    width: 530px;
+    height: 298px;
+  }
+
+  #focusproject{
+    width: 530px;
+    height: 298px;
   }
 }
