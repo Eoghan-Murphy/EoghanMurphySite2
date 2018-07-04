@@ -64,6 +64,7 @@ nav li{
 }
 
 nav a{
+  color: black;
   text-decoration: none;
 }
 
@@ -369,6 +370,7 @@ footer{
 }
 
 #footerlinks a{
+  color: white;
   margin-top: 5px;
   margin-bottom: 5px;
   text-decoration: none;
@@ -451,6 +453,10 @@ footer{
   #focusproject{
     width: 730px;
     height: 411px;
+  }
+
+  #footerlinks{
+    max-width: 40%;
   }
 
 
